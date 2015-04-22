@@ -1,0 +1,43 @@
+label {
+		display: inline-block;
+		float: center;
+		clear: left;
+		width: 25%;
+		text-align: right;
+		padding: 5px;
+	}
+input {
+	display: inline-block;
+	float: center;
+	height: 50px;
+	width: 100px;
+}
+p {
+	margin: 1px;
+}
+table{
+	height:50px;
+	width: 100px;
+	text-align: center;
+	border:1px solid #000;
+	border-collapse: collapse;
+}
+table td{
+	width: 50%;
+	height: 50%;
+	border-right: 1px solid #000;
+	border-left: 1px solid #000;
+}
+table td:first-child {
+	border-left: none;
+	border-bottom: 1px dashed #808080;
+}
+table td:last-child {
+	border-right: none;
+}
+table tr:first-child{
+	color:blue;
+}
+table tr:last-child{
+	color:green;
+}
