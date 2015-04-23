@@ -24,8 +24,8 @@ function tipsCalc() {
 			BussersCC.innerHTML = (CcPoint * 0.4).toFixed(2)
 			BussersCash.innerHTML = (CashPoint * 0.4).toFixed(2)
 
-			RunHalfCC.innerHTML = (CcPoint * 0.35).toFixed(2)
-			RunHalfCash.innerHTML = (CashPoint * 0.35).toFixed(2)
+			RunHalfCC.innerHTML = (CcPoint * 0.38).toFixed(2)
+			RunHalfCash.innerHTML = (CashPoint * 0.38).toFixed(2)
 
 			BusHalfCC.innerHTML = (CcPoint * 0.25).toFixed(2)
 			BusHalfCash.innerHTML = (CashPoint * 0.25).toFixed(2)
