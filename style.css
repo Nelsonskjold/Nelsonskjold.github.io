@@ -1,8 +1,8 @@
 /* color templet
 https://color.adobe.com/Online-Form-color-theme-1220505/ */
 
-body{
-	background-color: #eff5f1 ;
+body {
+	font-family: helvetica;
 }
 label {
 		display: inline-block;
@@ -31,6 +31,9 @@ input[type="reset"] {
 }
 p {
 	margin: 5px;
+}
+.dent {
+	text-indent: 10%;
 }
 table{
 	height:50px;
@@ -64,4 +67,7 @@ table tr:last-child{
 }
 .pos{
 	color:black;
+}
+#wtf {
+	color: red;
 }
