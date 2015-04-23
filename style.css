@@ -41,3 +41,7 @@ table tr:first-child{
 table tr:last-child{
 	color:green;
 }
+#zomg {
+	height: 38px;
+	width: 75px;
+}
