@@ -15,108 +15,133 @@
 			<div style="width: 55%; display: table-cell; margin:0px auto">  	
 				<form action="">
 					<p>
-						<label> Points: </label>
-						<input type="number" id="Points" autocomplete="off">
+						<label> #Srv: </label>
+						<input  type ="number" id="numServ" autocomplete="off">
 					</p>
 					<p>
-						<label> CC : </label>
-						<input  type ="number" id="CcTips" autocomplete="off">
+						<label> #Rnr : </label>
+						<input  type ="number" id="numRun" autocomplete="off">
+					</p>
+					<p>
+						<label> #Bus : </label>
+						<input  type ="number" id="numBus" autocomplete="off">
 					</p>
 					<p>
 						<label> Cash: </label>
-						<input  type="number" id="Cash" autocomplete="off">
+						<input  type="number" id="cash" autocomplete="off">
 					</p>
-					<br />
-					<label></label>
-					<input type="button"; value = "Calc"; onclick = "tipsCalc()" />
-					<br />
-					<br />
-					<label id="rofl"></label>
-					<input type="reset" value ="Reset" id="zomg" />
-				</form>
+					<p>
+						<label> S1 : </label>
+						<input  type ="number" id="ccTips0" autocomplete="off">
+					</p>
+					<p>
+						<label> S2 : </label>
+						<input  type ="number" id="ccTips1" autocomplete="off">
+					</p>
+					<p>
+						<label> S3 : </label>
+						<input  type ="number" id="ccTips2" autocomplete="off">
+					</p>
+					<p>
+						<label> S4 : </label>
+						<input  type ="number" id="ccTips3" autocomplete="off">
+					</p>
+					<p>
+						<label> S5 : </label>
+						<input  type ="number" id="ccTips4" autocomplete="off">
+					</p>
+					<p>
+						<label> S6 : </label>
+						<input  type ="number" id="ccTips5" autocomplete="off">
+					</p>
 			</div>
 			
-			<div style="display: table-cell; width: 45%; margin:0 auto;">  
+			<div style="display: table-cell; width: 35%; margin:0px auto";>  
 
 				<table>
 					<tr>
-						<td id="BarCC"> </td>
-						<td rowspan="2" id="Bar" class="pos">Bar </td>
-					</tr>
-					<tr>
-						<td id="BarCash"></td>
+						<td id="totalPoints"> test</td>
+						<td rowspan="1" class="pos">Points </td>
 					</tr>
 				</table>
 				<table>
 					<tr>
-						<td id="ServCC"> </td>
+						<td id="barCash"> </td>
+						<td rowspan="2"  class="pos"> Bar </td>
+					</tr>
+					<tr>
+						<td id="barCC"></td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td id="halfBarCash"> </td>
+						<td rowspan="2" class="pos">B/2</td>
+					</tr>
+					<tr>
+						<td id="halfBarCC"></td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td id="servCash"></td>
 						<td rowspan="2" class="pos">1.00</td>
 					</tr>
 					<tr>
-						<td id="ServCash"></td>
+						<td id="servCc"></td>
 					</tr>
 				</table>
 				<table>
 					<tr>
-						<td id="RunCC"></td>
+						<td id="runCash"></td>
 						<td rowspan="2" class="pos">0.75</td>
 					</tr>
 					<tr>
-						<td id="RunCash"></td>
+						<td id="runCC"></td>
 					</tr>
 				</table>
 				<table>
 					<tr>
-						<td id="BusCC"></td>
-						<td rowspan="2" class="pos">0.50</td>
+						<td id="busCash"></td>
+						<td rowspan="2" class="pos">Bus</td>
 					</tr>
 					<tr>
-						<td id="BusCash"></td>
-					</tr>
-				</table>
-				<table>
-					<tr>
-						<td id="BussersCC"></td>
-						<td rowspan="2" class="pos">0.40</td>
-					</tr>
-					<tr>
-						<td id="BussersCash"></td>
+						<td id="busCC"></td>
 					</tr>
 				</table>
 				<table>
 					<tr>
-						<td id="RunHalfCC"></td>
+						<td id="runHalfCash"></td>
 						<td rowspan="2" class="pos">0.38</td>
 					</tr>
 					<tr>
-						<td id="RunHalfCash"></td>
+						<td id="runHalfCC"></td>
 					</tr>
 				</table>
 				<table>
 					<tr>
-						<td id="BusHalfCC"></td>
+						<td id="busHalfCash"></td>
 						<td rowspan="2" class="pos">0.25</td>
 					</tr>
 					<tr>
-						<td id="BusHalfCash"></td>
+						<td id="busHalfCC"></td>
 					</tr>
 				</table>
+				<p></p>
+				</p>
+					<input type="button"; value = "Calc"; onclick = "pointsCalc()" />
+					<label></label>
+					<br />
+					<br />
+					<input type="reset" value ="Reset" />
+					<label id="rofl"></label>
+				</form>
 			</div>
 		</div>
 	</div>
 	<script type="text/javascript" src="script.js"></script>
 </body>
 <footer>
-	<div>
-		<h2> Tip Pool Calc-Beta </h2>
-		<p class="dent">
-			Testing out a calculator for doing the money faster. Blue txt means credit card tips, green text means cash tips. The number corrsponds to the cut. 1 = server, 0.5 = busser, 0.38 = a runners half cut. 
-		</p>
-		<p class="dent">
-			Double check my work, and if bored, try to break it please.
-		</p>
-		<p id="wtf">
-		</p>
-	</div>
+
 </footer>
 </html>
