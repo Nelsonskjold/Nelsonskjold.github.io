@@ -1,82 +1,52 @@
-/* color templet
-https://color.adobe.com/Online-Form-color-theme-1220505/ */
+
+.money {
+	color: green;
+}
+
+.credit{
+
+}
+
+td {
+	width: 50%;
+	line-height: 4vh;
+    min-height: 4vh;
+    height: 4vh;
+}
+
+tr {
+	width: 50%;
+    line-height: 4vh;
+    min-height: 4vh;
+    height: 4vh;
+}
+
+.input-group-addon{
+	width: 35%;
+}
 
 body {
-	font-family: helvetica;
-	background-color: #eff5f1;
-	font-size: 1em;
+	background-image: url("squared_metal.png");
+	background-repeat: repeat;
 }
-div {
-	vertical-align:top
-	float: center;
+html, body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	margin-top: 5%;
+
 }
-label {
-	display: inline-block;
-	float: center;
-	clear: left;
-	width: 25%;
-	text-align: right;
-	padding: 3px;
-	}
-input {
-	display: inline-block;
-	float: center;
-	height: 50px;
-	width: 100px;
+
+div.container {
+	height: 100%;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+	padding: 0;
+	vertical-align: middle;
+}
+
+tbody {
+	background-color: white;
 	text-align: center;
-	border: solid 1px black;
-	border: 2px transparent black;
-	background-color: #eff5f1 ;
-
-}
-input[type="button"] {
-	background-color: #91bce6;
-
-}
-input[type="reset"] {
-	background-color: #91bce6;
-}
-p {
-	margin: 5px;
-}
-.dent {
-	text-indent: 10%;
-}
-table{
-	height:50px;
-	width: 125px;
-	text-align: center;
-	border:1px solid #000;
-	border-collapse: collapse;
-	vertical-align: top;
-}
-
-table td{
-	width: 50%;
-	height: 50%;
-	border-right: 1px solid #000;
-	border-left: 1px solid #000;
-}
-table td:first-child {
-	border-left: none;
-	border-bottom: 1px dashed #808080;
-}
-table td:last-child {
-	border-right: none;
-}
-table tr:first-child{
-	color: #69922c;
-}
-table tr:last-child{
-	color: #175ba4;
-}
-#zomg {
-	height: 38px;
-	width: 75px;
-}
-.pos{
-	color:black;
-}
-#wtf {
-	color: red;
 }
