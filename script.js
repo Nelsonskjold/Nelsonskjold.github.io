@@ -1,31 +1,27 @@
 function pointsCalc() {
-	var servPoint = document.getElementById("numServ").value * 1.0;
-	var runPoint = (document.getElementById("numRun").value) * 0.75;
-	var busPoint = document.getElementById("numBus").value;
+	var servPoint = parseFloat($("#numServ").val());
+	var runPoint = parseFloat($('#numRun').val() * 0.75);
+	var busPoint = parseFloat($('#numBus').val());
 
 	if (busPoint >= 3) {
-		busPoint = busPoint * 0.40;
-		busCut = 0.40;
+		busPoint = 0.40;
 	} else {
 		busPoint = busPoint * 0.50;
-		busCut = 0.50;
 	}
 
 	var points = servPoint + runPoint + busPoint;
 
-	totalPoints.innerHTML = points.toFixed(2);
-	tipsCalc(points, busCut);
-
+	$('#totalPoints').html(points);
+	tipsCalc(points);
 }
 
-function tipsCalc(x, bCut) {
-	var totalCash = document.getElementById("cash").value;
+function tipsCalc(x) {
+	var totalCash = parseFloat($('#cash').val());
 	var totalCC = 0;
 	var points = x;
-	var busCut = bCut;
 
 	for (var i = 0; i <= 5; i++ ) {
-		 totalCC += document.getElementById("ccTips" + i).value * 1.00;
+		totalCC += $('#ccTips' + i).val() * 1.00; 
 	}
 
 	var bCash = Math.round(totalCash * 0.05);
@@ -33,26 +29,44 @@ function tipsCalc(x, bCut) {
 
 	var cashPoint = (totalCash - bCash) / points;
 	var ccPoint = (totalCC - bCC) / points;
-	
-	barCash.innerHTML = bCash;
-	barCC.innerHTML = bCC;
 
-	halfBarCash.innerHTML = Math.round(bCash / 2);
-	halfBarCC.innerHTML = (bCC / 2).toFixed(2);
+	$('#barCash').html(bCash);
+	$('#barCC').html(bCC);
 
-	servCash.innerHTML = Math.round(cashPoint);
-	servCc.innerHTML = ccPoint.toFixed(2);
+	$('#halfBarCash').html(Math.round(bCash / 2));
+	$('#halfBarCC').html((bCC / 2).toFixed(2));
 
-	runCash.innerHTML = Math.round(cashPoint * 0.75);
-	runCC.innerHTML = (ccPoint * 0.75).toFixed(2);
+	$('#servCash').html(Math.round(cashPoint));
+	$('#servCC').html(ccPoint.toFixed(2));
 
-	busCash.innerHTML = Math.round(cashPoint * busCut);
-	busCC.innerHTML = (ccPoint * busCut).toFixed(2);
+	$('#runCash').html(Math.round(cashPoint * 0.75));
+	$('#runCC').html((ccPoint * 0.75).toFixed(2));
 
-	runHalfCash.innerHTML = Math.round(cashPoint * 0.38);
-	runHalfCC.innerHTML = (ccPoint * 0.38).toFixed(2);
+	$('#busCash').html(Math.round(cashPoint * 0.50));
+	$('#busCC').html((ccPoint * 0.50).toFixed(2));
 
-	busHalfCash.innerHTML = Math.round(cashPoint * 0.25);
-	busHalfCC.innerHTML = (ccPoint * 0.25).toFixed(2);
+	$('#busserCash').html(Math.round(cashPoint * 0.40));
+	$('#busserCC').html((ccPoint * 0.40).toFixed(2));
 
+	$('#runHalfCash').html(Math.round(cashPoint * 0.38));
+	$('#runHalfCC').html((ccPoint * 0.38).toFixed(2));
+
+	$('#busHalfCash').html(Math.round(cashPoint * 0.25));
+	$('#busHalfCC').html((ccPoint * 0.25).toFixed(2));
 }
+
+
+$('#calc').click(function() {
+	pointsCalc();
+});
+
+$('#reset').click(function() {
+	$('#numServ').val('');
+	$('#numRun').val('');
+	$('#numBus').val('');
+	$('#cash').val('');
+
+	for (var i = 0; i <= 5; i++) {
+		$('#ccTips' + i).val('');
+	};
+});
