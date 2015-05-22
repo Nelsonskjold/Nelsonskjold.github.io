@@ -1,146 +1,143 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	 
-	 <link href="style.css" rel="stylesheet" type="text/css" charset="utf-8">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	 <meta name="viewport" content="width=device-width, initail-scale=1, maximum-scale=1, user-scalable=no">
+    <title>TipsCalc2</title>
 
-</head>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="style2.css" rel="stylesheet">
 
-<body>
-	<div style="width: 100%; display: table;">
-		<div style="display:table-row">
-			<div style="width: 55%; display: table-cell; margin:0px auto">  	
-				<form action="">
-					<p>
-						<label> #Srv: </label>
-						<input  type ="number" id="numServ" autocomplete="off">
-					</p>
-					<p>
-						<label> #Rnr : </label>
-						<input  type ="number" id="numRun" autocomplete="off">
-					</p>
-					<p>
-						<label> #Bus : </label>
-						<input  type ="number" id="numBus" autocomplete="off">
-					</p>
-					<p>
-						<label> Cash: </label>
-						<input  type="number" id="cash" autocomplete="off">
-					</p>
-					<p>
-						<label> S1 : </label>
-						<input  type ="number" placeholder="CC Tips" id="ccTips0" autocomplete="off">
-					</p>
-					<p>
-						<label> S2 : </label>
-						<input  type ="number" placeholder="CC Tips" id="ccTips1" autocomplete="off">
-					</p>
-					<p>
-						<label> S3 : </label>
-						<input  type ="number" placeholder="CC Tips" id="ccTips2" autocomplete="off">
-					</p>
-					<p>
-						<label> S4 : </label>
-						<input  type ="number" placeholder="CC Tips" id="ccTips3" autocomplete="off">
-					</p>
-					<p>
-						<label> S5 : </label>
-						<input  type ="number" placeholder="CC Tips" id="ccTips4" autocomplete="off">
-					</p>
-					<p>
-						<label> S6 : </label>
-						<input  type ="number" placeholder="CC Tips" id="ccTips5" autocomplete="off">
-					</p>
-			</div>
-			
-			<div style="display: table-cell; width: 35%; margin:0px auto";>  
 
-				<table>
-					<tr>
-						<td id="totalPoints"></td>
-						<td rowspan="1" class="pos">Points </td>
-					</tr>
-				</table>
-				<table>
-					<tr>
-						<td id="barCash"> </td>
-						<td rowspan="2"  class="pos"> Bar </td>
-					</tr>
-					<tr>
-						<td id="barCC"></td>
-					</tr>
-				</table>
-				<table>
-					<tr>
-						<td id="halfBarCash"> </td>
-						<td rowspan="2" class="pos">B/2</td>
-					</tr>
-					<tr>
-						<td id="halfBarCC"></td>
-					</tr>
-				</table>
-				<table>
-					<tr>
-						<td id="servCash"></td>
-						<td rowspan="2" class="pos">Srv</td>
-					</tr>
-					<tr>
-						<td id="servCc"></td>
-					</tr>
-				</table>
-				<table>
-					<tr>
-						<td id="runCash"></td>
-						<td rowspan="2" class="pos">Run</td>
-					</tr>
-					<tr>
-						<td id="runCC"></td>
-					</tr>
-				</table>
-				<table>
-					<tr>
-						<td id="busCash"></td>
-						<td rowspan="2" class="pos">Bus</td>
-					</tr>
-					<tr>
-						<td id="busCC"></td>
-					</tr>
-				</table>
-				<table>
-					<tr>
-						<td id="runHalfCash"></td>
-						<td rowspan="2" class="pos">0.38</td>
-					</tr>
-					<tr>
-						<td id="runHalfCC"></td>
-					</tr>
-				</table>
-				<table>
-					<tr>
-						<td id="busHalfCash"></td>
-						<td rowspan="2" class="pos">0.25</td>
-					</tr>
-					<tr>
-						<td id="busHalfCC"></td>
-					</tr>
-				</table>
-				<p></p>
-				</p>
-					<input type="button"; value = "Calc"; onclick = "pointsCalc()" />
-					<label></label>
-					<br />
-					<input type="reset" value ="Reset" />
-					<label id="rofl"></label>
-				</form>
-			</div>
-		</div>
-	</div>
-	<script type="text/javascript" src="script.js"></script>
-</body>
-<footer>
+  </head>
+  <body>
+    <div class="container">
+        <div class="col-xs-6 form-group">
+          <div class="input-group">
+            <span class="input-group-addon">#S  </span>
+            <input type="number" class="form-control" placeholder="Serv" aria-describedby="basic-addon1" id="numServ">
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon">#R  </span>
+            <input type="number" class="form-control" placeholder="Run" aria-describedby="basic-addon1" id="numRun">
+          </div>
+        <div class="input-group">
+          <span class="input-group-addon">#B  </span>
+          <input type="number" class="form-control" placeholder="Busboy" aria-describedby="basic-addon1" id="numBus">
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon">$$</span>
+          <input type="number" class="form-control" placeholder="Cash" aria-describedby="basic-addon1" id="cash">
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon">S1  </span>
+          <input type="number" class="form-control" placeholder="ccTips" aria-describedby="basic-addon1" id="ccTips0">
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon">S2  </span>
+          <input type="number" class="form-control" placeholder="ccTips" aria-describedby="basic-addon1" id="ccTips1">
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon">S3  </span>
+          <input type="number" class="form-control" placeholder="ccTips" aria-describedby="basic-addon1" id="ccTips2">
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon">S4  </span>
+          <input type="number" class="form-control" placeholder="ccTips" aria-describedby="basic-addon1" id="ccTips3">
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon">S5  </span>
+          <input type="number" class="form-control" placeholder="ccTips" aria-describedby="basic-addon1" id="ccTips4">
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon">S6  </span>
+          <input type="number" class="form-control" placeholder="ccTips" aria-describedby="basic-addon1" id="ccTips5">
+        </div>
+        <br />
+         <input class="btn btn-success btn-block" type="submit" value="Calc" id = "calc">
+        <input class="btn btn-danger btn-block" type="reset" value="Reset" id= "reset">
+    </div>
+    <div class="container">
+      <div class="col-xs-6">
+          <table class="table  table-bordered">
+            <tr>
+              <td id="totalPoints"></td>
+              <td rowspan="1"> Points </td>
+            </tr>
+            <tr>
+              <td id="barCash" class="money"></td>
+              <td rowspan="2"> Bar </td>
+            </tr>
+            <tr>
+              <td id="barCC" class="credit"></td>
+            </tr>
+            <tr>
+              <td id="halfBarCash" class="money"> </td>
+              <td rowspan="2"> B/2 </td>
+            </tr>
+            <tr>
+              <td id="halfBarCC" class="credit"></td>
+            </tr>
+            <tr>
+              <td id="servCash" class="money"></td>
+              <td rowspan="2"> Serv </td>
+            </tr>
+            <tr>
+              <td id="servCC" class="credit"></td>
+            </tr>
+            <tr>
+              <td id="runCash" class="money"></td>
+              <td rowspan="2"> Run </td>
+            </tr>
+            <tr>
+              <td id="runCC" class="credit"></td>
+            </tr>
+            <tr>
+              <td id="busCash" class="money"></td>
+              <td rowspan="2"> 0.5 </td>
+            </tr>
+            <tr>
+              <td id="busCC" class="credit"></td>
+            </tr>
+            <tr>
+              <td id="busserCash" class="money"></td>
+              <td rowspan="2"> 0.4 </td>
+            </tr>
+            <tr>
+              <td id="busserCC" class="credit"></td>
+            </tr>
+            <tr>
+              <td id="runHalfCash" class="money"></td>
+              <td rowspan="2"> 0.38 </td>
+            </tr>
+            <tr>
+              <td id="runHalfCC" class="credit"></td>
+            </tr>
+            <tr>
+              <td id="busHalfCash" class="money"></td>
+              <td rowspan="2"> 0.25 </td>
+            </tr>
+            <tr>
+              <td id="busHalfCC" class="credit"></td>
+            </tr>
+          </table>
+      </div>
+          <div class="container">
+            <div class="col-xs-6 col-xs-offset-3">
+              <!--input class="btn btn-success btn-block" type="submit" value="Calc" id = "calc">
+        <input class="btn btn-danger btn-block" type="reset" value="Reset" id= "reset"-->
+            </div>
+          </div>
+      </div>
+    </div>
+  </body>
 
-</footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="script3-jq.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
 </html>
