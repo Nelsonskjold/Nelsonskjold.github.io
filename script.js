@@ -4,7 +4,7 @@ function pointsCalc() {
 	var busPoint = parseFloat($('#numBus').val());
 
 	if (busPoint >= 3) {
-		busPoint = 0.40;
+		busPoint = busPoint * 0.40;
 	} else {
 		busPoint = busPoint * 0.50;
 	}
