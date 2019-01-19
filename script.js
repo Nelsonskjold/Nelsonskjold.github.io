@@ -1,14 +1,7 @@
 function pointsCalc() {
 	var servPoint = parseFloat($("#numServ").val());
 	var runPoint = parseFloat($('#numRun').val() * 0.75);
-	var busPoint = parseFloat($('#numBus').val());
-
-	if (busPoint >= 3) {
-		busPoint = busPoint * 0.40;
-	} else {
-		busPoint = busPoint * 0.50;
-	}
-
+	var busPoint = parseFloat($('#numBus').val() * 0.50);
 	var points = servPoint + runPoint + busPoint;
 
 	$('#totalPoints').html(points);
